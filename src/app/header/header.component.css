@@ -1,0 +1,24 @@
+.navbar-bg-indigo-900 {
+  background-color: #1A237E;
+}
+
+.navbar a.navbar-brand {
+  color: #FFF;
+}
+
+.navbar a.nav-link {
+  color: #FFF;
+}
+
+ul.nav-right {
+  list-style-type: none;
+}
+
+ul.nav-right li{
+  display: inline;
+  padding: 0.5em;
+}
+
+ul.nav-right li a {
+  text-decoration: none;
+}

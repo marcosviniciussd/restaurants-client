@@ -1,0 +1,7 @@
+[
+  { "_id": "1", "name": "Pão de Mel", "category": "Padaria", "rating" : 4.5, "img": "breadbakery.png" },
+  { "_id": "2", "name": "Burger Minas", "category": "Hamburgueria", "rating" : 3.8, "img": "burgerhouse.png"  },
+  { "_id": "3", "name": "O Cravo e a Rosa", "category": "Bar", "rating" : 4.8, "img": "coffeecorner.png"  },
+  { "_id": "4", "name": "A maça Envenenada", "category": "Bar", "rating" : 4.1, "img": "coffeecorner.png"  },
+  { "_id": "5", "name": "Pizza 10", "category": "Pizzaria", "rating" : 4.2, "img": "tasty.png"  }
+]
