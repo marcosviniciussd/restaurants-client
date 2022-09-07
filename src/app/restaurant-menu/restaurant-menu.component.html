@@ -1,1 +1,75 @@
-<p>restaurant-menu works!</p>
+<div class="container">
+  <div class="mt-3">
+    <div class="row">
+      <div class="col-12">
+        <div class="card mb-10">
+          <div class="card-header">
+            {{restaurant.name}}
+            <span class="float-end"><fa-icon [icon]="faStar"></fa-icon> {{restaurant.rating}}</span>
+          </div>
+          <div class="row g-0">
+            <div class="col-md-3">
+              <img src='assets/img/restaurants/{{restaurant.img}}' class="img-fluid rounded-start" alt="..." width="250" height="250">
+            </div>
+            <div class="col-md-9">
+              <div class="card-body">
+                <h5>Categoria</h5>
+                <p class="card-text">{{restaurant.category}}</p>
+                <h5>Quem somos</h5>
+                <p class="card-text">A Bread & Brakery tem 40 anos de mercado. Fazemos os melhores doces e pães. Compre e confira.</p>
+                <h5>Horários</h5>
+                <p class="card-text">Funciona de segunda à sexta, de 8h às 23h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8 offset-2 my-4">
+        <h3 class="text-center">Menu</h3>
+        <hr class="border border-primary border-1 opacity-75" style="margin: 0.5em 0;">
+      </div>
+
+    </div>
+    <div class="row">
+        <div class="col-8">
+          <div *ngFor="let item of restaurant.menuItems" class="card mb-12 my-3">
+            <div class="row g-0">
+              <div class="col-md-3">
+                <img src="assets/img/foods/{{item.img}}" class="img-fluid rounded-start" alt="..." width="120" height="120">
+              </div>
+              <div class="col-md-9">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.name}}</h5>
+                  <p class="card-text">{{item.description}}</p>
+                  <p class="float-end">
+                    <span class="text-left me-4">{{item.price}}</span>
+                    <a href="" class="btn btn-sm btn-outline-primary" (click)="addMenuItem($event, item)"><fa-icon [icon]="faPlus"></fa-icon> Adicionar</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card border-light mb-3">
+            <div class="card-header">Carrinho</div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush d-flex justify-content-between" *ngFor="let item of menuItems">
+                <li class="list-menu-item"><strong>{{item.name}}:</strong><span class="float-end">{{item.price}}</span></li>
+              </ul>
+              <ul class="list-group list-group-flush">
+                <li class="list-menu-item"><strong>Frete:</strong><span class="float-end">R$ 8,00</span></li>
+                <li class="list-menu-item"><strong>Total:</strong><span class="float-end">R$ 80,90</span></li>
+              </ul>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-danger me-md-2" type="button">Limpar</button>
+                <button class="btn btn-success" type="button">Fazer Pedido</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

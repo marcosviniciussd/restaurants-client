@@ -1,7 +1,22 @@
 [
-  { "_id": "1", "name": "Pão de Mel", "category": "Padaria", "rating" : 4.5, "img": "breadbakery.png" },
-  { "_id": "2", "name": "Burger Minas", "category": "Hamburgueria", "rating" : 3.8, "img": "burgerhouse.png"  },
-  { "_id": "3", "name": "O Cravo e a Rosa", "category": "Bar", "rating" : 4.8, "img": "coffeecorner.png"  },
-  { "_id": "4", "name": "A maça Envenenada", "category": "Bar", "rating" : 4.1, "img": "coffeecorner.png"  },
-  { "_id": "5", "name": "Pizza 10", "category": "Pizzaria", "rating" : 4.2, "img": "tasty.png"  }
+  { "_id": "1", "name": "Pão de Mel", "category": "Padaria", "rating" : 4.5, "img": "breadbakery.png",
+    "items": [{
+      "name": "Cup Cake", "description": "Cup Cake recheado de Doce de Leite", "price": 10.5
+    },
+    {
+      "name": "Donut", "description": "Coberto com chantilly", "price": 15.60
+    },
+    {
+      "name": "Croissant", "description": "Recheado com queijo e presunto", "price": 10.5
+    }
+  ]
+  },
+  { "_id": "2", "name": "Burger Minas", "category": "Hamburgueria", "rating" : 3.8, "img": "burgerhouse.png",
+  "items": [
+    {"name": "X-Salada", "description": "Hamburger recheado com queijo e presunto", "price": 25.5},
+    {"name": "X-Tudo", "description": "Hamburger recheado com queijo e presunto", "price": 35.8}
+  ]},
+  { "_id": "3", "name": "O Cravo e a Rosa", "category": "Bar", "rating" : 4.8, "img": "coffeecorner.png", "items": []  },
+  { "_id": "4", "name": "A maça Envenenada", "category": "Bar", "rating" : 4.1, "img": "coffeecorner.png", "items": []  },
+  { "_id": "5", "name": "Pizza 10", "category": "Pizzaria", "rating" : 4.2, "img": "tasty.png", "items": []  }
 ]

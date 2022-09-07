@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RestaurantService } from '../services/restaurant.service';
+import { Router } from '@angular/router';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-restaurants',
@@ -7,11 +9,19 @@ import { RestaurantService } from '../services/restaurant.service';
   styleUrls: ['./restaurants.component.css']
 })
 export class RestaurantsComponent implements OnInit {
+  faStar = faStar;
   restaurantList:Array<any> = [];
-  constructor(private restaurantService: RestaurantService) { }
+  constructor(
+    private restaurantService: RestaurantService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.getRestaurants();
+  }
+
+  getMenu(id: string): void {
+    this.router.navigate(['/restaurants-menu', id])
   }
 
   getRestaurants(): void {
@@ -23,7 +33,7 @@ export class RestaurantsComponent implements OnInit {
       console.log(this.restaurantList);
     }, (err) => {
       console.log(err);
-    })
+    });
   }
 
 }
